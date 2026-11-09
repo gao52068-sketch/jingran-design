@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects — https://developers.cloudflare.com/pages/configuration/redirects/
+# The homepage used to be called WorkBuddy-page.html. Keep old links working.
+/WorkBuddy-page.html  /  301

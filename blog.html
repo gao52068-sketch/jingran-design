@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Jingran Design blog — field notes on brand, product and website design.">
+<title>Blog · Jingran Design</title>
+<meta name="theme-color" content="#6359ff">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236359ff'/%3E%3Cstop offset='1' stop-color='%238554ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Cpath d='M64 26v32a14 14 0 0 1-28 0' fill='none' stroke='%23fff' stroke-width='11' stroke-linecap='round'/%3E%3C/svg%3E">
+<!-- Before launch, point og:image / twitter:image at a real 1200x630 PNG/JPG -->
+<meta property="og:title" content="Blog · Jingran Design">
+<meta property="og:description" content="Field notes on brand, product and website design.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zrj2026.com/blog.html">
+<meta property="og:image" content="./og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog · Jingran Design">
+<meta name="twitter:description" content="Field notes on brand, product and website design.">
+<meta name="twitter:image" content="./og-image.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Jingran Design Blog",
+  "description": "Field notes on brand, product and website design.",
+  "url": "https://zrj2026.com/blog.html"
+}
+</script>
+<style>
+  :root{
+    --ink:#0f172a; --ink-2:#334155; --muted:#64748b; --line:#e6e9ef;
+    --bg:#ffffff; --soft:#f7f8fb; --brand:#6359ff; --brand-2:#8554ff; --brand-soft:#efedff;
+    --radius:18px;
+    --shadow-sm:0 1px 2px rgba(15,23,42,.05),0 10px 26px -16px rgba(15,23,42,.18);
+    --shadow-md:0 2px 6px rgba(15,23,42,.05),0 28px 56px -28px rgba(15,23,42,.28);
+    --container:1120px; --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  img,svg{display:block;max-width:100%}
+  h1,h2,h3,h4{margin:0;line-height:1.25;letter-spacing:-.02em;font-weight:700}
+  p{margin:0}a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+  :focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:6px}
+  .wrap{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
+  section{scroll-margin-top:84px}
+  .skip-link{position:absolute;top:-40px;left:0;padding:8px 16px;background:var(--brand);color:#fff;z-index:100;font-size:14px;font-weight:600;border-radius:0 0 8px 0;transition:top .2s}
+  .skip-link:focus{top:0}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.12em;
+    color:var(--brand);text-transform:uppercase;margin-bottom:16px}
+  .eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--brand),var(--brand-2))}
+  .lead{color:var(--muted);font-size:clamp(15px,1.5vw,17px);max-width:56ch}
+
+  /* Header */
+  .site-header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);
+    border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+  .site-header.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px -20px rgba(15,23,42,.5)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em}
+  .brand-mark{
+    width:34px;height:34px;flex:none;display:grid;place-items:center;
+  }
+  .brand-mark svg{width:100%;height:100%;display:block;overflow:visible}
+  .brand-mark .bm-frame{
+    fill:none;stroke:#8b82ff;stroke-width:2.6;stroke-linecap:round;
+    transform-box:view-box;transform-origin:16px 16px;
+    transition:transform .35s var(--ease,ease-out),stroke .3s;
+  }
+  .brand-mark .bm-j{fill:none;stroke:var(--brand);stroke-width:3.1;stroke-linecap:round}
+  .brand:hover .brand-mark .bm-frame{transform:scale(.88);stroke:var(--brand-2)}
+  .brand small{display:block;font-size:10px;letter-spacing:.18em;color:var(--muted);font-weight:600;line-height:1.2}
+  .nav-links{display:flex;align-items:center;gap:4px}
+  .nav-links a{padding:8px 14px;border-radius:9px;font-size:15px;color:var(--ink-2);transition:background .2s,color .2s}
+  .nav-links a:hover{background:var(--soft);color:var(--ink)}
+  .nav-links a[aria-current="page"]{color:var(--brand);background:var(--brand-soft)}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    height:48px;padding:0 24px;border-radius:12px;
+    font-weight:600;font-size:15px;white-space:nowrap;
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,color .25s;
+  }
+  .btn-primary{
+    color:#fff;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    box-shadow:0 10px 22px -10px rgba(99,89,255,.75);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(99,89,255,.8)}
+  .btn-ghost{color:var(--ink);background:#fff;border:1px solid var(--line)}
+  .btn-ghost:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm);border-color:#d5dae4}
+
+  .nav-cta .btn{height:40px;padding:0 18px;font-size:14px}
+  .burger{display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--line);place-items:center;background:#fff}
+  .burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;position:relative;transition:transform .3s var(--ease)}
+  .burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s var(--ease),opacity .2s}
+  .burger span::before{top:-6px}.burger span::after{top:6px}
+  .burger[aria-expanded="true"] span{background:transparent}
+  .burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+  .burger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+  .mobile-menu{display:none;border-top:1px solid var(--line);background:#fff;box-shadow:0 24px 40px -30px rgba(15,23,42,.6)}
+  .mobile-menu.open{display:block;animation:drop .28s var(--ease)}
+  .mobile-menu nav{display:grid;padding:10px 0 18px}
+  .mobile-menu a{padding:13px 4px;border-bottom:1px solid var(--soft);font-size:15px}
+  .mobile-menu a[aria-current="page"]{color:var(--brand);background:var(--brand-soft)}
+  .mobile-menu .btn{margin-top:14px;width:100%}
+  @keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+  /* Footer social */
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .foot p{font-size:13px;color:var(--muted)}
+  .foot nav{display:flex;gap:20px;flex-wrap:wrap}
+  .foot nav a{font-size:13.5px;color:var(--muted)}
+  .foot nav a:hover{color:var(--ink)}
+  .foot-left{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+  .foot-social{display:flex;gap:12px;align-items:center}
+  .social-btn{width:40px;height:40px;border-radius:50%;flex:none;display:grid;place-items:center;color:#fff;background:var(--ink-2);
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,filter .25s}
+  .social-btn svg{width:20px;height:20px}
+  .social-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+  .social-btn.fb{background:#1877f2}.social-btn.fb:hover{background:#166fe5}
+  .social-btn.tt{background:#161823}.social-btn.tt:hover{background:#000}
+  .social-btn.x{background:#000}
+  .social-btn.x:hover{background:#1a1a1a}
+  .social-btn.ig{background:linear-gradient(45deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888)}.social-btn.ig:hover{filter:brightness(1.07)}
+
+  /* Blog list */
+  .blog-hero{padding:clamp(44px,6vw,76px) 0 clamp(8px,2vw,20px)}
+  .blog-hero h1{font-size:clamp(30px,4.4vw,46px);letter-spacing:-.03em;margin-bottom:12px}
+  .blog-hero .lead{margin-top:14px}
+  .posts{padding:clamp(24px,4vw,40px) 0 clamp(48px,7vw,80px)}
+
+  .tag{display:inline-block;align-self:flex-start;background:var(--brand-soft);color:var(--brand);font-weight:600;padding:4px 12px;border-radius:999px;font-size:12px}
+
+  .featured{display:grid;grid-template-columns:1.05fr .95fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow .3s var(--ease),transform .3s var(--ease)}
+  .featured:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+  .featured .ph{aspect-ratio:4/3;border-radius:0;border:0;height:100%}
+  .featured-body{padding:clamp(24px,3vw,38px);display:flex;flex-direction:column;gap:12px;justify-content:center}
+  .featured-body .meta{display:flex;gap:12px;align-items:center;font-size:13px;color:var(--muted)}
+  .featured-body h2{font-size:clamp(20px,2.6vw,28px);line-height:1.25}
+  .featured-body p{color:var(--muted);font-size:15px}
+  .read-more{display:inline-flex;align-items:center;gap:6px;color:var(--brand);font-weight:600;font-size:15px;margin-top:4px}
+  .read-more:hover{text-decoration:underline}
+
+  .more-head{margin-top:48px;margin-bottom:20px;font-size:clamp(18px,2.2vw,22px)}
+  .post-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .mini{display:block;padding:26px 24px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+  .mini:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);border-color:#dfe4ee}
+  .mini h3{font-size:17px;margin:10px 0 8px}
+  .mini p{color:var(--muted);font-size:14px}
+  .mini .go{display:inline-flex;align-items:center;gap:6px;color:var(--brand);font-weight:600;font-size:14px;margin-top:6px}
+
+  .ph{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);
+    background:radial-gradient(120% 110% at 12% 8%,#e9edff 0%,transparent 55%),
+      radial-gradient(90% 90% at 88% 18%,#e6f6f4 0%,transparent 52%),
+      linear-gradient(135deg,#f2f5ff,#eef2f7);display:grid;place-items:center}
+  .ph-img{width:100%;height:100%;object-fit:cover;display:block}
+  .ph-tag{position:absolute;left:14px;bottom:12px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:#8b95a7;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.9);
+    padding:4px 9px;border-radius:999px;backdrop-filter:blur(6px)}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media (max-width:860px){
+    .nav-links,.nav-cta .btn{display:none}.burger{display:grid}
+    .featured{grid-template-columns:1fr}
+    .featured .ph{aspect-ratio:16/9}
+  }
+  @media (max-width:600px){
+    .wrap{padding:0 18px}
+    .foot{flex-direction:column;align-items:flex-start}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+<span id="top" aria-hidden="true"></span>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================= Header ================= -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html#top" aria-label="Jingran Design — home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path class="bm-frame" d="M4 10V6.5A2.5 2.5 0 0 1 6.5 4H10M22 4h3.5A2.5 2.5 0 0 1 28 6.5V10M28 22v3.5a2.5 2.5 0 0 1-2.5 2.5H22M10 28H6.5A2.5 2.5 0 0 1 4 25.5V22"/><path class="bm-j" d="M20.6 9.4v9a5.1 5.1 0 0 1-10.2 0"/></svg></span>
+      <span>Jingran Design<small>JINGRAN STUDIO</small></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#testimonials">Testimonials</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="about.html">About</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="index.html#contact">Free consultation</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="wrap">
+      <nav aria-label="Mobile navigation">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="about.html">About</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a class="btn btn-primary" href="index.html#contact">Free consultation</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ================= BlogHome ================= -->
+  <section class="blog-hero">
+    <div class="wrap reveal">
+      <span class="eyebrow">BLOG</span>
+      <h1>Design notes</h1>
+      <p class="lead">Field notes on brand, product and website design — written down in short pieces in case they're useful to you.</p>
+    </div>
+  </section>
+
+  <section class="posts">
+    <div class="wrap">
+
+      <!-- Featured post -->
+      <a class="featured reveal" href="blog-post-1.html" aria-label="Read: how a small team gets recognised at a glance">
+        <div class="ph">
+          <img class="ph-img" src="assets/blog-cover.jpg" alt="Designer arranging visual concepts on a wall" width="1600" height="900" loading="lazy" decoding="async">
+        </div>
+        <div class="featured-body">
+          <span class="tag">Brand design</span>
+          <div class="meta"><span>2026-10-28</span><span>·</span><span>6 min read</span></div>
+          <h2>How a small team gets recognised at a glance</h2>
+          <p>When budget is tight, visual identity is the cheapest lever you have. Three things you can start on today to earn a place in your customer's memory.</p>
+          <span class="read-more">Read the piece →</span>
+        </div>
+      </a>
+
+      <!-- More reading -->
+      <h2 class="more-head reveal">More reading</h2>
+      <div class="post-grid">
+        <a class="mini reveal" href="index.html#services">
+          <span class="tag">Our services</span>
+          <h3>What we can do, from brand to website</h3>
+          <p>Brand identity, product interfaces, websites, growth — find the piece you need right now.</p>
+          <span class="go">See services →</span>
+        </a>
+        <a class="mini reveal" href="index.html#contact">
+          <span class="tag">Start a project</span>
+          <h3>Got an idea but not sure where to start?</h3>
+          <p>Tell us your goal and timeline. You'll get initial recommendations within one business day, free.</p>
+          <span class="go">Contact us →</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- ================= Footer ================= -->
+<footer>
+  <div class="wrap foot">
+    <div class="foot-left">
+      <p>© 2026 Jingran Design · JINGRAN STUDIO · All rights reserved</p>
+      <div class="foot-social">
+        <a class="social-btn fb" href="https://www.facebook.com/share/1HmiTe7P35/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.03 3.66 9.2 8.44 9.94v-7.04H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.92 3.79-3.92 1.1 0 2.25.2 2.25.2v2.47h-1.27c-1.25 0-1.64.78-1.64 1.58v1.9h2.79l-.45 2.9h-2.34V22c4.78-.74 8.44-4.91 8.44-9.94z"/></svg>
+        </a>
+        <a class="social-btn x" href="https://x.com/juanzheng12" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a class="social-btn ig" href="https://www.instagram.com/zheng20262026" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="social-btn tt" href="https://www.tiktok.com/@zrj2026" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.2v12.9a2.59 2.59 0 1 1-2.59-2.59c.27 0 .53.04.78.12v-3.24a5.79 5.79 0 0 0-.78-.06 5.84 5.84 0 1 0 5.84 5.84V8.94a7.4 7.4 0 0 0 4.32 1.46V7.2a4.28 4.28 0 0 1-3.31-1.38z"/></svg>
+        </a>
+      </div>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#testimonials">Testimonials</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#top">Back to top</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  const burger=document.getElementById('burger'),mobileMenu=document.getElementById('mobileMenu');
+  burger.addEventListener('click',()=>{
+    const open=burger.getAttribute('aria-expanded')==='true';
+    burger.setAttribute('aria-expanded',String(!open));
+    burger.setAttribute('aria-label',open?'Open menu':'Close menu');
+    mobileMenu.classList.toggle('open',!open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    mobileMenu.classList.remove('open');burger.setAttribute('aria-expanded','false');
+  }));
+  const header=document.querySelector('.site-header');
+  const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>8);
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  const items=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver((es)=>es.forEach((e,i)=>{
+      if(!e.isIntersecting)return;
+      setTimeout(()=>e.target.classList.add('in'),i*80);io.unobserve(e.target);
+    }),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    items.forEach(el=>io.observe(el));
+  }else{items.forEach(el=>el.classList.add('in'));}
+</script>
+
+<script>
+/* Back to top: anchors on a sticky header do not work, so scroll explicitly */
+document.querySelectorAll('a[href="#top"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+});
+</script>
+<script src="assets/auth.js" defer></script>
+</body>
+</html>
