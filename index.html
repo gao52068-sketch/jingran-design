@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Jingran Design — brand identity, product interfaces and websites for growing teams.">
+<title>Jingran Design · Making good products seen at a glance</title>
+<meta name="theme-color" content="#6359ff">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236359ff'/%3E%3Cstop offset='1' stop-color='%238554ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Cpath d='M64 26v32a14 14 0 0 1-28 0' fill='none' stroke='%23fff' stroke-width='11' stroke-linecap='round'/%3E%3C/svg%3E">
+<!-- Before launch, point og:image / twitter:image at a real 1200x630 PNG/JPG -->
+<meta property="og:title" content="Jingran Design · Making good products seen at a glance">
+<meta property="og:description" content="Brand identity, product interfaces and websites for growing teams. 120+ projects delivered, 96% client retention.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zrj2026.com/">
+<meta property="og:image" content="./og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jingran Design · Making good products seen at a glance">
+<meta name="twitter:description" content="Brand identity, product interfaces and websites for growing teams.">
+<meta name="twitter:image" content="./og-image.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Jingran Design",
+  "alternateName": "JINGRAN STUDIO",
+  "description": "Brand identity, product interfaces and websites for growing teams.",
+  "url": "https://zrj2026.com/",
+  "sameAs": [
+    "https://www.facebook.com/share/1HmiTe7P35/",
+    "https://x.com/juanzheng12",
+    "https://www.instagram.com/zheng20262026",
+    "https://www.tiktok.com/@zrj2026"
+  ],
+  "email": "gao52068@gmail.com",
+  "telephone": "+54-11-5745-7773",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Buenos Aires",
+    "streetAddress": "Av. Carabobo 773"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "68"
+  }
+}
+</script>
+<style>
+  /* ========== Design tokens: change these to re-theme the site ========== */
+  :root{
+    --ink:#0f172a;
+    --ink-2:#334155;
+    --muted:#64748b;
+    --line:#e6e9ef;
+    --bg:#ffffff;
+    --soft:#f7f8fb;
+    --brand:#6359ff;
+    --brand-2:#8554ff;
+    --brand-soft:#efedff;
+    --star:#f59e0b;
+    --radius:18px;
+    --shadow-sm:0 1px 2px rgba(15,23,42,.05), 0 10px 26px -16px rgba(15,23,42,.18);
+    --shadow-md:0 2px 6px rgba(15,23,42,.05), 0 28px 56px -28px rgba(15,23,42,.28);
+    --container:1120px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%}
+  h1,h2,h3,h4{margin:0;line-height:1.25;letter-spacing:-.02em;font-weight:700}
+  p{margin:0}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+  :focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:6px}
+
+  .wrap{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
+  section{scroll-margin-top:84px}
+  .skip-link{position:absolute;top:-40px;left:0;padding:8px 16px;background:var(--brand);color:#fff;z-index:100;font-size:14px;font-weight:600;border-radius:0 0 8px 0;transition:top .2s}
+  .skip-link:focus{top:0}
+
+  /* ========== Shared typographic elements ========== */
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:600;letter-spacing:.12em;
+    color:var(--brand);text-transform:uppercase;margin-bottom:16px;
+  }
+  .eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--brand),var(--brand-2))}
+  .h2{font-size:clamp(26px,3.4vw,38px)}
+  .lead{color:var(--muted);font-size:clamp(15px,1.5vw,17px);max-width:56ch}
+  .section-head{max-width:640px;margin-bottom:48px}
+  .section-head .lead{margin-top:14px}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    height:48px;padding:0 24px;border-radius:12px;
+    font-weight:600;font-size:15px;white-space:nowrap;
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,color .25s;
+  }
+  .btn-primary{
+    color:#fff;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    box-shadow:0 10px 22px -10px rgba(99,89,255,.75);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(99,89,255,.8)}
+  .btn-ghost{color:var(--ink);background:#fff;border:1px solid var(--line)}
+  .btn-ghost:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm);border-color:#d5dae4}
+
+  /* ========== Media frame ========== */
+  .ph{
+    position:relative;overflow:hidden;border-radius:var(--radius);
+    border:1px solid var(--line);
+    background:
+      radial-gradient(120% 110% at 12% 8%,#e9edff 0%,transparent 55%),
+      radial-gradient(90% 90% at 88% 18%,#e6f6f4 0%,transparent 52%),
+      linear-gradient(135deg,#f2f5ff,#eef2f7);
+    display:grid;place-items:center;
+  }
+  .ph-img{width:100%;height:100%;object-fit:cover;display:block}
+  .ph-tag{
+    position:absolute;left:14px;bottom:12px;
+    font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:#8b95a7;background:rgba(255,255,255,.72);
+    border:1px solid rgba(255,255,255,.9);
+    padding:4px 9px;border-radius:999px;backdrop-filter:blur(6px);
+  }
+
+  /* ========== Header ========== */
+  .site-header{
+    position:sticky;top:0;z-index:60;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s,box-shadow .3s;
+  }
+  .site-header.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px -20px rgba(15,23,42,.5)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
+
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em}
+  .brand-mark{
+    width:34px;height:34px;flex:none;display:grid;place-items:center;
+  }
+  .brand-mark svg{width:100%;height:100%;display:block;overflow:visible}
+  .brand-mark .bm-frame{
+    fill:none;stroke:#8b82ff;stroke-width:2.6;stroke-linecap:round;
+    transform-box:view-box;transform-origin:16px 16px;
+    transition:transform .35s var(--ease,ease-out),stroke .3s;
+  }
+  .brand-mark .bm-j{fill:none;stroke:var(--brand);stroke-width:3.1;stroke-linecap:round}
+  .brand:hover .brand-mark .bm-frame{transform:scale(.88);stroke:var(--brand-2)}
+  .brand small{display:block;font-size:10px;letter-spacing:.18em;color:var(--muted);font-weight:600;line-height:1.2}
+
+  .nav-links{display:flex;align-items:center;gap:4px}
+  .nav-links a{
+    padding:8px 14px;border-radius:9px;font-size:15px;color:var(--ink-2);
+    transition:background .2s,color .2s;
+  }
+  .nav-links a:hover{background:var(--soft);color:var(--ink)}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+  .nav-cta .btn{height:40px;padding:0 18px;font-size:14px}
+
+  .burger{
+    display:none;width:42px;height:42px;border-radius:10px;
+    border:1px solid var(--line);place-items:center;background:#fff;
+  }
+  .burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;position:relative;transition:transform .3s var(--ease)}
+  .burger span::before,.burger span::after{
+    content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);border-radius:2px;
+    transition:transform .3s var(--ease),opacity .2s;
+  }
+  .burger span::before{top:-6px}
+  .burger span::after{top:6px}
+  .burger[aria-expanded="true"] span{background:transparent}
+  .burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+  .burger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+
+  .mobile-menu{
+    display:none;border-top:1px solid var(--line);background:#fff;
+    box-shadow:0 24px 40px -30px rgba(15,23,42,.6);
+  }
+  .mobile-menu.open{display:block;animation:drop .28s var(--ease)}
+  .mobile-menu nav{display:grid;padding:10px 0 18px}
+  .mobile-menu a{padding:13px 4px;border-bottom:1px solid var(--soft);font-size:15px}
+  .mobile-menu .btn{margin-top:14px;width:100%}
+  @keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+  /* ========== Hero ========== */
+  .hero{padding:clamp(40px,7vw,76px) 0 clamp(56px,8vw,92px);position:relative;overflow:hidden}
+  .hero::after{
+    content:"";position:absolute;inset:auto -10% 40% auto;width:520px;height:520px;
+    background:radial-gradient(circle,rgba(133,84,255,.10),transparent 65%);
+    pointer-events:none;z-index:-1;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:center}
+  .hero h1{font-size:clamp(32px,5.2vw,56px);letter-spacing:-.03em}
+  .hero h1 .hl{
+    background:linear-gradient(120deg,var(--brand),var(--brand-2) 70%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero .lead{margin-top:20px;font-size:clamp(15px,1.7vw,18px);max-width:52ch}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+  .hero-stats{
+    display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,44px);
+    margin-top:44px;padding-top:26px;border-top:1px solid var(--line);
+  }
+  .stat b{display:block;font-size:clamp(22px,2.6vw,28px);letter-spacing:-.02em}
+  .stat span{font-size:13px;color:var(--muted)}
+
+  .hero-visual{position:relative;min-width:0}
+  /* ========== Hero showcase video ========== */
+  .showcase{
+    position:relative;aspect-ratio:16/10;border-radius:var(--radius);
+    overflow:hidden;box-shadow:var(--shadow-md);background:#0b0d12;
+    min-width:0;max-width:100%;
+  }
+  .showcase video{
+    width:100%;height:100%;object-fit:cover;object-position:top center;
+    display:block;background:#0b0d12;
+  }
+  /* Caption row that sits ABOVE the video: "● Live site · LUNAMODA ↗" */
+  .showcase-top{
+    display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+    margin:0 0 11px;min-width:0;
+  }
+  .showcase-badge{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:5px 10px;border-radius:999px;
+    font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+    color:#15803d;background:#e9f9ef;border:1px solid #c7f0d8;
+  }
+  .showcase-badge i{width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.18)}
+  .showcase-sep{color:#cbd5e1;font-weight:600;font-size:12px}
+  .showcase-link{
+    display:inline-flex;align-items:center;gap:5px;
+    font:700 13px/1 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    letter-spacing:.02em;color:var(--ink);text-decoration:none;
+    padding:3px 0;border-radius:6px;transition:color .18s;
+  }
+  .showcase-link:hover{color:var(--brand)}
+  .showcase-link .lk-ico{transition:transform .18s}
+  .showcase-link:hover .lk-ico{transform:translate(1px,-1px)}
+  .showcase-link .lk-lock{display:none}
+  .showcase-link[data-locked="1"]{color:#7c8698}
+  .showcase-link[data-locked="1"]:hover{color:var(--brand)}
+  .showcase-link[data-locked="1"] .lk-ico{display:none}
+  .showcase-link[data-locked="1"] .lk-lock{display:block;color:#94a3b8}
+  .showcase-hint{font-size:11.5px;color:#94a3b8}
+  .showcase-btn{
+    position:absolute;right:12px;bottom:12px;z-index:3;
+    width:38px;height:38px;border-radius:50%;cursor:pointer;
+    background:rgba(255,255,255,.93);border:1px solid rgba(15,23,42,.08);
+    box-shadow:0 3px 14px rgba(15,23,42,.22);display:grid;place-items:center;
+    color:var(--ink);
+    transition:transform .2s,background .2s;
+  }
+  .showcase-btn:hover{transform:scale(1.07);background:#fff}
+  .showcase-btn:active{transform:scale(.95)}
+  .showcase-btn svg{pointer-events:none}
+  .showcase-btn .ico-play{display:none}
+  .showcase-btn.paused .ico-pause{display:none}
+  .showcase-btn.paused .ico-play{display:block}
+  .showcase-dots{
+    position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:3;
+    display:none;gap:7px;padding:6px 11px;border-radius:999px;
+    background:rgba(255,255,255,.9);backdrop-filter:blur(6px);
+    box-shadow:0 2px 10px rgba(15,23,42,.16);
+  }
+  .showcase-dots.on{display:flex}
+  .showcase-dot{
+    width:8px;height:8px;border-radius:50%;padding:0;border:0;cursor:pointer;
+    background:rgba(15,23,42,.28);transition:width .3s var(--ease,ease-out),background .3s;
+  }
+  .showcase-dot.active{width:22px;border-radius:999px;background:var(--brand)}
+  .float-card{
+    position:absolute;left:-10px;bottom:-74px;
+    display:flex;align-items:center;gap:12px;
+    padding:14px 18px;border-radius:14px;background:#fff;
+    border:1px solid var(--line);box-shadow:var(--shadow-md);
+  }
+  .float-card .dot{width:34px;height:34px;border-radius:10px;background:var(--brand-soft);display:grid;place-items:center;color:var(--brand);font-weight:700;font-size:13px}
+  .float-card b{display:block;font-size:14px}
+  .float-card span{font-size:12px;color:var(--muted)}
+
+  /* ========== Trust bar ========== */
+  .logos{border-block:1px solid var(--line);background:var(--soft)}
+  .logos .wrap{display:flex;align-items:center;gap:clamp(20px,4vw,48px);flex-wrap:wrap;padding-block:22px}
+  .logos p{font-size:13px;color:var(--muted);letter-spacing:.04em;flex:none}
+  .logos ul{display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,44px);list-style:none;margin:0;padding:0}
+  .logos li{font-weight:700;font-size:15px;color:#aab2c0;letter-spacing:.02em;transition:color .25s}
+  .logos li:hover{color:var(--ink-2)}
+
+  /* ========== Services ========== */
+  .services{padding:clamp(64px,9vw,104px) 0}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:20px}
+  .card{
+    padding:28px 26px 30px;border:1px solid var(--line);border-radius:var(--radius);
+    background:#fff;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:#dfe4ee}
+  .icon{
+    width:46px;height:46px;border-radius:13px;display:grid;place-items:center;
+    background:var(--brand-soft);color:var(--brand);margin-bottom:18px;
+  }
+  .card h3{font-size:18px;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:14.5px}
+  .card ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:8px}
+  .card li{position:relative;padding-left:20px;font-size:14px;color:var(--ink-2)}
+  /* Clickable service cards */
+  .card{display:flex;flex-direction:column;cursor:pointer;text-align:left;width:100%;font:inherit;color:inherit}
+  .card:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+  .card .card-more{display:inline-flex;align-items:center;gap:5px;margin-top:auto;padding-top:18px;font-size:13.5px;font-weight:600;color:var(--brand);transition:gap .25s var(--ease)}
+  .card:hover .card-more{gap:10px}
+  /* Service modal */
+  .svc-modal{
+    position:fixed;inset:0;z-index:210;background:rgba(9,11,18,.62);
+    display:grid;place-items:center;padding:20px;
+    opacity:0;pointer-events:none;transition:opacity .25s ease;
+  }
+  .svc-modal.open{opacity:1;pointer-events:auto}
+  .svc-panel{
+    position:relative;background:#fff;border-radius:20px;width:100%;max-width:660px;
+    max-height:88vh;overflow:auto;padding:clamp(24px,4vw,36px);
+    box-shadow:0 30px 80px rgba(9,11,18,.35);
+    transform:translateY(14px) scale(.98);transition:transform .3s var(--ease);
+  }
+  .svc-modal.open .svc-panel{transform:none}
+  .svc-close{
+    position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;
+    border:1px solid var(--line);background:#fff;color:var(--muted);font-size:19px;
+    line-height:1;display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s;
+  }
+  .svc-close:hover{background:var(--soft);color:var(--ink)}
+  .svc-head{display:flex;gap:16px;align-items:flex-start;padding-right:44px}
+  .svc-head .icon{margin-bottom:0;flex:none}
+  .svc-head h3{font-size:21px;margin-bottom:8px}
+  .svc-head p{color:var(--muted);font-size:14.5px}
+  .svc-block{margin-top:24px}
+  .svc-block h4{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .svc-block ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+  .svc-block li{position:relative;padding-left:20px;font-size:14.5px;color:var(--ink-2);line-height:1.6}
+  .svc-block li::before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--brand)}
+  .svc-facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px;padding:18px;background:var(--soft);border-radius:14px}
+  .svc-facts b{display:block;font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--muted);margin-bottom:5px}
+  .svc-facts span{font-size:14.5px;font-weight:600;color:var(--ink)}
+  .svc-foot{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  @media (max-width:520px){ .svc-facts{grid-template-columns:1fr} }
+  .card li::before{
+    content:"";position:absolute;left:2px;top:8px;width:8px;height:8px;border-radius:3px;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));opacity:.75;
+  }
+
+  /* ========== Testimonials ========== */
+  .testimonials{padding:clamp(64px,9vw,104px) 0;background:var(--soft);border-block:1px solid var(--line)}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:20px}
+  .quote{
+    display:flex;flex-direction:column;gap:18px;
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:28px 26px;transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+  }
+  .quote:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+  .stars{display:flex;gap:3px;color:var(--star);font-size:14px;letter-spacing:.06em}
+  .quote > blockquote{flex:1;margin:0}
+  .quote p{color:var(--ink-2);font-size:15px;flex:1}
+  .person{display:flex;align-items:center;gap:12px;padding-top:6px;border-top:1px solid var(--soft)}
+  .avatar{
+    width:42px;height:42px;border-radius:50%;flex:none;display:grid;place-items:center;
+    color:#fff;font-weight:700;font-size:14px;letter-spacing:.02em;
+    background:linear-gradient(135deg,#7a6bff,#8b5cf6);
+  }
+  .avatar.alt{background:linear-gradient(135deg,#0ea5e9,#22d3ee)}
+  .avatar.alt2{background:linear-gradient(135deg,#f97316,#fb7185)}
+  .person b{display:block;font-size:14.5px}
+  .person span{font-size:12.5px;color:var(--muted)}
+
+  /* ========== Contact ========== */
+  .contact{padding:clamp(64px,9vw,104px) 0}
+  .contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(28px,5vw,60px);align-items:start}
+  .info-list{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:22px}
+  .info-list li{display:flex;gap:14px;align-items:flex-start}
+  .info-list .icon{width:40px;height:40px;border-radius:11px;margin:0;flex:none}
+  .info-list b{display:block;font-size:14.5px;margin-bottom:2px}
+  .info-list span,.info-list a{color:var(--muted);font-size:14.5px}
+  .info-list a:hover{color:var(--brand)}
+
+  .form-card{
+    background:#fff;border:1px solid var(--line);border-radius:22px;
+    padding:clamp(24px,3.4vw,36px);box-shadow:var(--shadow-md);
+  }
+  .form-card h3{font-size:19px;margin-bottom:6px}
+  .form-card .hint{font-size:13.5px;color:var(--muted);margin-bottom:24px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:13.5px;font-weight:600;margin-bottom:7px}
+  .field input,.field textarea{
+    width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:11px;
+    background:#fcfcfe;font:inherit;font-size:14.5px;color:var(--ink);
+    transition:border-color .2s,box-shadow .2s,background .2s;
+  }
+  .field textarea{resize:vertical;min-height:112px}
+  .field input::placeholder,.field textarea::placeholder{color:#a8b1c1}
+  .field input:focus,.field textarea:focus{
+    outline:none;background:#fff;border-color:#b9bcf7;
+    box-shadow:0 0 0 4px rgba(99,89,255,.12);
+  }
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .form-card .btn{width:100%;margin-top:6px}
+  .form-note{font-size:12.5px;color:var(--muted);text-align:center;margin-top:14px}
+  .form-ok{
+    display:none;margin-top:16px;padding:12px 14px;border-radius:11px;
+    background:#ecfdf5;border:1px solid #a7f3d0;color:#047857;font-size:14px;
+  }
+  .form-ok.show{display:block;animation:drop .3s var(--ease)}
+
+  /* ========== Selected work ========== */
+  .portfolio{padding:clamp(64px,9vw,104px) 0;background:var(--soft);border-block:1px solid var(--line)}
+  .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+  .project{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .project:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:#dfe4ee}
+  .project .ph{aspect-ratio:16/10;border-radius:0;border-left:0;border-right:0;border-top:0}
+  .project-body{padding:22px 24px 26px}
+  .project-body .tag{background:var(--brand-soft);color:var(--brand);font-weight:600;padding:3px 10px;border-radius:999px;font-size:12px;display:inline-block;align-self:flex-start;margin-bottom:10px}
+  .project-body h3{font-size:18px;margin-bottom:8px}
+  .project-body p{color:var(--muted);font-size:14.5px}
+  .project{display:flex;flex-direction:column}
+  .project-body{flex:1;display:flex;flex-direction:column}
+  .project-body .more{display:inline-flex;align-items:center;gap:5px;margin-top:auto;padding-top:14px;font-size:13.5px;font-weight:600;color:var(--brand);transition:gap .25s var(--ease)}
+  .project:hover .project-body .more{gap:10px}
+
+  /* ========== FAQ ========== */
+  .faq{padding:clamp(64px,9vw,104px) 0}
+  .faq-list{max-width:760px;margin:0 auto;display:grid;gap:12px}
+  .faq details{border:1px solid var(--line);border-radius:14px;background:#fff;transition:box-shadow .2s}
+  .faq details:hover{box-shadow:var(--shadow-sm)}
+  .faq summary{list-style:none;cursor:pointer;padding:18px 24px;font-size:16px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:20px;color:var(--brand);font-weight:400;flex:none}
+  .faq details[open] summary::after{content:"−"}
+  .faq details[open]{border-color:#d5d9e4}
+  .faq .answer{padding:0 24px 20px;color:var(--ink-2);font-size:15.5px;line-height:1.75}
+  .faq .answer p{margin-bottom:10px}
+
+  /* ========== Footer ========== */
+  footer{border-top:1px solid var(--line);padding:36px 0}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .foot p{font-size:13px;color:var(--muted)}
+  .foot nav{display:flex;gap:20px;flex-wrap:wrap}
+  .foot nav a{font-size:13.5px;color:var(--muted)}
+  .foot nav a:hover{color:var(--ink)}
+
+  /* ========== Footer social ========== */
+  .foot-left{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+  .foot-social{display:flex;gap:12px;align-items:center}
+  .social-btn{
+    width:40px;height:40px;border-radius:50%;flex:none;
+    display:grid;place-items:center;color:#fff;background:var(--ink-2);
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,filter .25s;
+  }
+  .social-btn svg{width:20px;height:20px}
+  .social-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+  /* Brand colours */
+  .social-btn.fb{background:#1877f2}
+  .social-btn.fb:hover{background:#166fe5}
+  .social-btn.tt{background:#161823}
+  .social-btn.tt:hover{background:#000}
+  .social-btn.x{background:#000}
+  .social-btn.x:hover{background:#1a1a1a}
+  .social-btn.ig{background:linear-gradient(45deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888)}
+  .social-btn.ig:hover{filter:brightness(1.07)}
+
+  /* ========== Scroll reveal ========== */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ========== Responsive ========== */
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;gap:44px}
+    .hero-visual{order:-1;max-width:560px}
+    .float-card{left:auto;right:12px;bottom:-18px}
+    .showcase-btn{top:12px;bottom:auto}
+    .contact-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:860px){
+    .nav-links,.nav-cta .btn{display:none}
+    .burger{display:grid}
+    .hero-stats{gap:28px}
+  }
+  @media (max-width:600px){
+    .wrap{padding:0 18px}
+    .form-row{grid-template-columns:1fr}
+    .hero-actions .btn{flex:1 1 100%}
+    .float-card{padding:11px 14px;bottom:-16px;right:8px}
+    .foot{flex-direction:column;align-items:flex-start}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+<span id="top" aria-hidden="true"></span>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================= Header ================= -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Jingran Design — home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path class="bm-frame" d="M4 10V6.5A2.5 2.5 0 0 1 6.5 4H10M22 4h3.5A2.5 2.5 0 0 1 28 6.5V10M28 22v3.5a2.5 2.5 0 0 1-2.5 2.5H22M10 28H6.5A2.5 2.5 0 0 1 4 25.5V22"/><path class="bm-j" d="M20.6 9.4v9a5.1 5.1 0 0 1-10.2 0"/></svg></span>
+      <span>Jingran Design<small>JINGRAN STUDIO</small></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#contact">Free consultation</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="wrap">
+      <nav aria-label="Mobile navigation">
+        <a href="#services">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a class="btn btn-primary" href="#contact">Free consultation</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= Hero ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Brand · Product · Web</span>
+        <h1>Making good products<br><span class="hl">seen at a glance</span></h1>
+        <p class="lead">
+          We help growing teams sharpen their brand, design their product and sweat every detail. Less back-and-forth, shorter delivery cycles, work that holds up.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Start a project</a>
+          <a class="btn btn-ghost" href="#services">See services →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>120+</b><span>Projects delivered</span></div>
+          <div class="stat"><b>8 years</b><span>Years in the field</span></div>
+          <div class="stat"><b>96%</b><span>Retention rate</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <!-- Showcase video: scroll-through of a live site we designed and built.
+             Swap assets/showcase.mp4 and showcase-poster.jpg for your own footage. -->
+        <div class="showcase-top">
+          <span class="showcase-badge"><i></i>Live site</span>
+          <span class="showcase-sep" aria-hidden="true">&middot;</span>
+          <a class="showcase-link" id="showcaseLink" href="#" target="_blank" rel="noopener"
+             data-gate="link" data-name="LUNAMODA" data-locked="1"
+             title="Sign in to visit LUNAMODA">
+            <span id="showcaseName">LUNAMODA</span>
+            <svg class="lk-ico" width="11" height="11" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+                 stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            <svg class="lk-lock" width="11" height="11" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                 stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          </a>
+          <span class="showcase-hint" id="showcaseHint" role="status"></span>
+        </div>
+
+        <div class="showcase">
+          <video id="showcaseVideo" poster="assets/showcase-poster.jpg"
+                 autoplay muted loop playsinline preload="metadata"
+                 aria-label="Scroll-through preview of the LUNAMODA online store">
+            <source src="assets/showcase.mp4" type="video/mp4">
+          </video>
+          <div class="showcase-dots" id="showcaseDots" role="tablist" aria-label="Choose a showcase"></div>
+          <button class="showcase-btn" id="showcaseBtn" type="button" aria-label="Pause the preview video">
+            <svg class="ico-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+            <svg class="ico-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.53.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z"/></svg>
+          </button>
+        </div>
+
+        <div class="float-card">
+          <span class="dot">★</span>
+          <div>
+            <b>4.9 / 5.0</b>
+            <span>from 68 client reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Trust bar ================= -->
+  <div class="logos">
+    <div class="wrap">
+      <p>Teams we've worked with</p>
+      <ul>
+        <li>NOVA</li>
+        <li>Shanhe Capital</li>
+        <li>MORII</li>
+        <li>Yiye Tech</li>
+        <li>Lumen</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ================= Services ================= -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our services</span>
+        <h2 class="h2">From brand to product, end to end</h2>
+        <p class="lead">We don't pile on deliverables. We fix the handful of things that actually move conversion and experience.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal" role="button" tabindex="0" data-service="brand" aria-haspopup="dialog" aria-label="Learn more about brand identity services">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l2.4 5.6L20 11l-5.6 2.4L12 19l-2.4-5.6L4 11l5.6-2.4z"/>
+            </svg>
+          </div>
+          <h3>Brand identity</h3>
+          <p>From naming and mark to a complete visual system, so the brand stands out in its category.</p>
+          <ul>
+            <li>Mark and type guidelines</li>
+            <li>Colour and graphic system</li>
+            <li>Brand book delivery</li>
+          </ul>
+          <span class="card-more">Learn more <span aria-hidden="true">→</span></span>
+        </article>
+
+        <article class="card reveal" role="button" tabindex="0" data-service="ui" aria-haspopup="dialog" aria-label="Learn more about product UI services">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="13" rx="2.5"/>
+              <path d="M8 20h8M12 17v3"/>
+            </svg>
+          </div>
+          <h3>Product UI</h3>
+          <p>Web and mobile interface design that balances hierarchy, efficiency and craft.</p>
+          <ul>
+            <li>Interaction flows</li>
+            <li>High-fidelity UI design</li>
+            <li>Design system and component library</li>
+          </ul>
+          <span class="card-more">Learn more <span aria-hidden="true">→</span></span>
+        </article>
+
+        <article class="card reveal" role="button" tabindex="0" data-service="web" aria-haspopup="dialog" aria-label="Learn more about website services">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M3 12h18M12 3c2.6 2.6 2.6 15.4 0 18-2.6-2.6-2.6-15.4 0-18z"/>
+            </svg>
+          </div>
+          <h3>Websites</h3>
+          <p>Responsive landing pages and websites — fast to load, easy to maintain, structured around conversion.</p>
+          <ul>
+            <li>Page structure</li>
+            <li>Responsive front-end build</li>
+            <li>Core SEO and performance</li>
+          </ul>
+          <span class="card-more">Learn more <span aria-hidden="true">→</span></span>
+        </article>
+
+        <article class="card reveal" role="button" tabindex="0" data-service="growth" aria-haspopup="dialog" aria-label="Learn more about growth services">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/>
+            </svg>
+          </div>
+          <h3>Growth</h3>
+          <p>Data finds the problem; small, fast experiments keep lifting conversion where it matters.</p>
+          <ul>
+            <li>Analytics dashboard</li>
+            <li>Conversion path audit</li>
+            <li>A/B testing and iteration</li>
+          </ul>
+          <span class="card-more">Learn more <span aria-hidden="true">→</span></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Selected work ================= -->
+  <section class="portfolio" id="portfolio">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Selected work</span>
+        <h2 class="h2">We turn ideas into work that holds up</h2>
+        <p class="lead">A selection of delivered projects. Some names have been changed for client confidentiality.</p>
+      </div>
+
+      <div class="portfolio-grid" data-gate="portfolio">
+        <a class="project reveal" href="case-nova.html" aria-label="View the NOVA brand identity case study">
+          <div class="ph">
+            <img class="ph-img" src="assets/work-brand.jpg" alt="Brand identity project: visual system and collateral" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
+          <div class="project-body">
+            <span class="tag">Brand identity</span>
+            <h3>NOVA · Full brand programme</h3>
+            <p>From naming strategy to a complete visual system, we helped a SaaS team become clearly recognisable in its category.</p>
+            <span class="more">View case <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <a class="project reveal" href="case-yipage.html" aria-label="View the Yiye Tech website rebuild case study">
+          <div class="ph">
+            <img class="ph-img" src="assets/work-web.jpg" alt="Website rebuild project: desktop layout" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
+          <div class="project-body">
+            <span class="tag">Website rebuild</span>
+            <h3>Yiye Tech · Website rebuild</h3>
+            <p>Information architecture rebuilt and a responsive front end shipped: first paint went from 3.2s to 0.9s.</p>
+            <span class="more">View case <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <a class="project reveal" href="case-morii.html" aria-label="View the MORII growth case study">
+          <div class="ph">
+            <img class="ph-img" src="assets/work-growth.jpg" alt="Growth project: analytics dashboard and conversion analysis" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
+          <div class="project-body">
+            <span class="tag">Growth</span>
+            <h3>MORII · Conversion</h3>
+            <p>Data diagnosis and A/B testing lifted conversion on the critical path by 34%.</p>
+            <span class="more">View case <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Testimonials ================= -->
+  <section class="testimonials" id="testimonials">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Testimonials</span>
+        <h2 class="h2">What clients actually said</h2>
+        <p class="lead">Most of these teams stayed on as long-term partners.</p>
+      </div>
+
+      <div class="quotes">
+        <figure class="quote reveal" style="margin:0">
+          <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
+          <blockquote style="margin:0">
+            <p>“From first call to launch took three weeks — fast but never rushed. Enquiries roughly doubled after the new site went live.”</p>
+          </blockquote>
+          <figcaption class="person">
+            <div class="avatar" aria-hidden="true">L</div>
+            <div>
+              <b>Zhiyuan Lin</b>
+              <span>NOVA · Founder</span>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure class="quote reveal" style="margin:0">
+          <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
+          <blockquote style="margin:0">
+            <p>“What stood out is that they raised problems we hadn't thought of instead of mechanically working through our brief. After the interface rebuild, user complaints dropped by 70%.”</p>
+          </blockquote>
+          <figcaption class="person">
+            <div class="avatar alt" aria-hidden="true">W</div>
+            <div>
+              <b>Wei Zhou</b>
+              <span>Yiye Tech · Head of Product</span>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure class="quote reveal" style="margin:0">
+          <div class="stars" aria-label="Rated 4 out of 5">★★★★☆</div>
+          <blockquote style="margin:0">
+            <p>“The handover was complete — we could use the brand book and component library straight away, and our own iterations stayed on track. We've already booked the next project.”</p>
+          </blockquote>
+          <figcaption class="person">
+            <div class="avatar alt2" aria-hidden="true">J</div>
+            <div>
+              <b>Jing Xu</b>
+              <span>MORII · Marketing Director</span>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="h2">Questions you might have</h2>
+        <p class="lead">If your question isn't here, just ask.</p>
+      </div>
+
+      <div class="faq-list reveal">
+        <details>
+          <summary>What does your process look like?</summary>
+          <div class="answer">
+            <p>Usually four steps: discovery → strategy → build → iterate on data. Each stage ends with a formal check-in so the direction stays honest.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How long does a project usually take?</summary>
+          <div class="answer">
+            <p>A full brand programme runs about 4–6 weeks, a website 2–4 weeks, and growth work is a monthly cycle. It depends on scope and how fast feedback comes back.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can we take design only, without development?</summary>
+          <div class="answer">
+            <p>Yes. We work either design-only or design-plus-front-end, and you can choose per stage.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do you take smaller budgets?</summary>
+          <div class="answer">
+            <p>Yes. What matters to us is whether the problem is clear and the goal measurable. If it's a fit, we'll propose something that suits your stage.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Is there a limit on revisions?</summary>
+          <div class="answer">
+            <p>Each major stage includes two to three rounds of revisions. If the direction changes fundamentally, we'll flag early whether it becomes a new stage.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Contact ================= -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Contact</span>
+        <h2 class="h2">Tell us about your project.<br>We reply within one business day</h2>
+        <p class="lead" style="margin-top:14px">
+          A new brand, a redesign, or just an idea you want to talk through — get in touch.
+        </p>
+
+        <ul class="info-list">
+          <li>
+            <div class="icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/>
+              </svg>
+            </div>
+            <div>
+              <b>Email</b>
+              <a href="mailto:gao52068@gmail.com">gao52068@gmail.com</a>
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 3h3l2 5-2.5 1.5a12 12 0 006 6L15 13l5 2v3a2 2 0 01-2.2 2A16.5 16.5 0 013 5.2 2 2 0 015 3z"/>
+              </svg>
+            </div>
+            <div>
+              <b>Phone</b>
+              <a href="tel:+541157457773">+54 11 5745 7773</a>
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21s7-6.1 7-11a7 7 0 10-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/>
+              </svg>
+            </div>
+            <div>
+              <b>Studio</b>
+              <span>Av. Carabobo 773, CABA, Argentina</span>
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/>
+              </svg>
+            </div>
+            <div>
+              <b>Hours</b>
+              <span>Mon – Fri · 10:00 – 19:00</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-card reveal">
+        <h3>Project enquiry</h3>
+        <p class="hint">Fill in the details below and we'll be in touch.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="name@company.com" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="topic">Project type</label>
+            <input id="topic" name="topic" type="text" placeholder="e.g. brand identity + website rebuild">
+          </div>
+
+          <div class="field">
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" placeholder="A short note on your goal, timeline and budget range…" required></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Send enquiry</button>
+          <p class="form-note">We never share your details with third parties.</p>
+          <div class="form-ok" id="formOk" role="status">Got it — thank you! We'll get back to you within one business day.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= Footer ================= -->
+<footer>
+  <div class="wrap foot">
+    <div class="foot-left">
+      <p>© 2026 Jingran Design · JINGRAN STUDIO · All rights reserved</p>
+      <!-- Social links -->
+      <div class="foot-social">
+        <a class="social-btn fb" href="https://www.facebook.com/share/1HmiTe7P35/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.03 3.66 9.2 8.44 9.94v-7.04H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.92 3.79-3.92 1.1 0 2.25.2 2.25.2v2.47h-1.27c-1.25 0-1.64.78-1.64 1.58v1.9h2.79l-.45 2.9h-2.34V22c4.78-.74 8.44-4.91 8.44-9.94z"/></svg>
+        </a>
+        <a class="social-btn x" href="https://x.com/juanzheng12" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a class="social-btn ig" href="https://www.instagram.com/zheng20262026" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="social-btn tt" href="https://www.tiktok.com/@zrj2026" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.2v12.9a2.59 2.59 0 1 1-2.59-2.59c.27 0 .53.04.78.12v-3.24a5.79 5.79 0 0 0-.78-.06 5.84 5.84 0 1 0 5.84 5.84V8.94a7.4 7.4 0 0 0 4.32 1.46V7.2a4.28 4.28 0 0 1-3.31-1.38z"/></svg>
+        </a>
+      </div>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <a href="#top">Back to top</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ================= Service modal ================= -->
+<div class="svc-modal" id="svcModal" role="dialog" aria-modal="true" aria-labelledby="svcTitle">
+  <div class="svc-panel">
+    <button class="svc-close" id="svcClose" type="button" aria-label="Close">&times;</button>
+    <div class="svc-head">
+      <div class="icon" id="svcIcon"></div>
+      <div>
+        <h3 id="svcTitle"></h3>
+        <p id="svcDesc"></p>
+      </div>
+    </div>
+    <div class="svc-block">
+      <h4>What's included</h4>
+      <ul id="svcIncludes"></ul>
+    </div>
+    <div class="svc-block">
+      <h4>How we deliver</h4>
+      <ul id="svcFlow"></ul>
+    </div>
+    <div class="svc-facts">
+      <div><b>Who it's for</b><span id="svcFor"></span></div>
+      <div><b>Timeline</b><span id="svcTime"></span></div>
+    </div>
+    <div class="svc-foot">
+      <a class="btn btn-primary" href="#contact" id="svcCta">Discuss this brief</a>
+      <button class="btn btn-ghost" type="button" id="svcClose2">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ---------- 1. Mobile menu ---------- */
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  burger.addEventListener('click', () => {
+    const open = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', String(!open));
+    burger.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+    mobileMenu.classList.toggle('open', !open);
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ---------- 2. Hairline on the header once scrolled ---------- */
+  const header = document.querySelector('.site-header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- 3. Fade elements in as they enter the viewport ---------- */
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (!entry.isIntersecting) return;
+        // Stagger elements in the same batch for a calmer feel
+        setTimeout(() => entry.target.classList.add('in'), i * 80);
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    items.forEach(el => io.observe(el));
+  } else {
+    items.forEach(el => el.classList.add('in'));
+  }
+
+  /* ---------- 4. Form validation and submit feedback ---------- */
+  const form = document.getElementById('contactForm');
+  const ok = document.getElementById('formOk');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fName = form.elements['name'];
+    const fEmail = form.elements['email'];
+    const fMessage = form.elements['message'];
+
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fEmail.value.trim());
+
+    if (!fName.value.trim()) { fName.focus(); return; }
+    if (!emailOk) { fEmail.focus(); return; }
+    if (!fMessage.value.trim()) { fMessage.focus(); return; }
+
+    // Set your Formspree ID (from https://formspree.io)
+    const FORMSPREE_ID = 'mljjooyl';
+
+    fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(r => {
+      if (r.ok) {
+        ok.classList.add('show');
+        form.reset();
+        setTimeout(() => ok.classList.remove('show'), 6000);
+      } else {
+        throw new Error('Server error');
+      }
+    })
+    .catch(() => {
+      alert('Something went wrong. Please email us directly at gao52068@gmail.com');
+    });
+  });
+
+  /* ---------- 5. Hero showcase video ----------
+     TO ADD ANOTHER SITE: drop the .mp4 + poster .jpg into assets/,
+     then add one line to SHOWCASES below. Dots appear automatically. */
+  (function () {
+    /* TO ADD ANOTHER SITE: drop the .mp4 + poster .jpg into assets/, then add
+       one line below. Dots appear automatically.
+
+       `url` is the client's live site. Visitors must sign in before the link
+       opens — the gate lives in assets/auth.js (data-gate="link").
+       Leave url as '' and the name still shows, but clicking does nothing. */
+    const SHOWCASES = [
+      { src: 'assets/showcase.mp4', poster: 'assets/showcase-poster.jpg',
+        name: 'LUNAMODA', url: 'https://luna-moda.gao52068.workers.dev/' }
+      // { src: 'assets/showcase-2.mp4', poster: 'assets/showcase-2-poster.jpg',
+      //   name: 'Another client', url: 'https://example.com' },
+    ];
+
+    const video = document.getElementById('showcaseVideo');
+    const btn = document.getElementById('showcaseBtn');
+    const link = document.getElementById('showcaseLink');
+    const nameEl = document.getElementById('showcaseName');
+    const hint = document.getElementById('showcaseHint');
+    const dotsWrap = document.getElementById('showcaseDots');
+    if (!video || !btn) return;
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let idx = 0;
+
+    function sync() {
+      const paused = video.paused;
+      btn.classList.toggle('paused', paused);
+      btn.setAttribute('aria-label', paused ? 'Play the preview video' : 'Pause the preview video');
+    }
+
+    // Point the caption link at the current showcase.
+    // The real URL is only written into href once the visitor is signed in, so
+    // "copy link address" / middle-click can't be used to skip the gate.
+    let currentUrl = '';
+    function applyHref() {
+      if (!link) return;
+      const signedIn = !!(window.JDAuth && JDAuth.getUser());
+      link.href = (signedIn && currentUrl) ? currentUrl : '#';
+    }
+    function paintLabel(item) {
+      if (!link || !nameEl) return;
+      currentUrl = item.url || '';
+      nameEl.textContent = item.name;
+      link.setAttribute('data-name', item.name);
+      link.setAttribute('data-pending', currentUrl ? '0' : '1');
+      applyHref();
+    }
+
+    function show(i, autoplay) {
+      idx = (i + SHOWCASES.length) % SHOWCASES.length;
+      const item = SHOWCASES[idx];
+      video.pause();
+      video.src = item.src;
+      video.poster = item.poster;
+      video.load();
+      paintLabel(item);
+      if (dotsWrap) {
+        Array.prototype.forEach.call(dotsWrap.children, function (d, k) {
+          d.classList.toggle('active', k === idx);
+          d.setAttribute('aria-selected', k === idx ? 'true' : 'false');
+        });
+      }
+      if (autoplay && !reduce.matches) video.play().catch(function () {});
+      sync();
+    }
+
+    // Build dots only when there is more than one showcase
+    if (dotsWrap && SHOWCASES.length > 1) {
+      SHOWCASES.forEach(function (item, k) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'showcase-dot' + (k === 0 ? ' active' : '');
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-label', 'Preview: ' + item.name);
+        b.addEventListener('click', function () { show(k, true); });
+        dotsWrap.appendChild(b);
+      });
+      dotsWrap.classList.add('on');
+    }
+
+    // Reduced motion: hold on the poster frame instead of looping
+    if (reduce.matches) video.pause();
+    if (reduce.addEventListener) {
+      reduce.addEventListener('change', function (e) {
+        if (e.matches) video.pause();
+        else video.play().catch(function () {});
+      });
+    }
+
+    btn.addEventListener('click', function () {
+      if (video.paused) video.play().catch(function () {});
+      else video.pause();
+    });
+
+    video.addEventListener('play', sync);
+    video.addEventListener('pause', sync);
+    video.addEventListener('loadeddata', sync);
+
+    // Caption link: point it at the first showcase, and explain the dead state
+    // if no URL has been filled in yet.
+    paintLabel(SHOWCASES[0]);
+
+    // auth.js is deferred, so it exists by DOMContentLoaded — not before.
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.JDAuth && JDAuth.onChange) JDAuth.onChange(applyHref);
+      applyHref();
+    });
+
+    if (link) {
+      link.addEventListener('click', function (e) {
+        if (link.getAttribute('data-pending') !== '1') return;
+        e.preventDefault();
+        // Signed out? auth.js has already intercepted and opened the modal.
+        if (!window.JDAuth || !JDAuth.getUser()) return;
+        if (!hint) return;
+        hint.textContent = 'Live link coming soon';
+        setTimeout(function () { hint.textContent = ''; }, 2600);
+      });
+    }
+
+    sync();
+  })();
+
+  /* ---------- 6. Service modal ---------- */
+  (function () {
+    const SERVICES = {
+      brand: {
+        title: 'Brand identity',
+        desc: 'From naming and mark to a complete visual system, so the brand stands out in its category.',
+        includes: [
+          'Logo design with multi-context variants (horizontal, stacked, mono)',
+          'Brand colour system and usage rules',
+          'Type hierarchy and typesetting rules',
+          'Graphic motif and its applications',
+          'Brand book (PDF + editable source files)',
+          'Figma component library and collateral templates'
+        ],
+        flow: [
+          'Diagnose: interview the core team and customers to establish where the brand stands',
+          'Strategy: distil the value proposition and a differentiated position',
+          'Design: mark, colour, type and graphic system developed in parallel',
+          'Deliver: brand book + component library + one all-hands walkthrough'
+        ],
+        for: 'Teams that have validated the product and need one consistent story',
+        time: '3–6 weeks'
+      },
+      ui: {
+        title: 'Product UI',
+        desc: 'Web and mobile interface design that balances hierarchy, efficiency and craft.',
+        includes: [
+          'User flows and information architecture',
+          'High-fidelity design for key screens (web / iOS / Android)',
+          'Design rules: colour, spacing, radius, elevation',
+          'Reusable component library with full state definitions',
+          'Developer handoff: specs, exports and packaged assets',
+          'Pre-launch design review and detail fixes'
+        ],
+        flow: [
+          'Scope: align business goals with user tasks',
+          'Flows: map the critical path and edge states',
+          'Interface: high-fidelity screens plus interaction notes',
+          'Handoff: specs, exports and developer Q&A'
+        ],
+        for: 'A product with a muddled interface, or a new product designed from zero',
+        time: '4–8 weeks'
+      },
+      web: {
+        title: 'Websites',
+        desc: 'Responsive landing pages and websites — fast to load, easy to maintain, structured around conversion.',
+        includes: [
+          'Information architecture and page structure',
+          'Visual design and responsive layout',
+          'Front-end build (semantic HTML + modern CSS)',
+          'Performance: image compression, lazy loading, above-the-fold first',
+          'Core SEO: meta tags, structured data, sitemap',
+          'Deployment and analytics setup'
+        ],
+        flow: [
+          'Content: decide the question each page has to answer',
+          'Structure: wireframes and content hierarchy',
+          'Visual design: desktop and mobile',
+          'Build: responsive front end plus performance tuning',
+          'Launch: deploy, test, hand over documentation'
+        ],
+        for: 'An ageing or slow site, or a site to be built from scratch',
+        time: '3–5 weeks'
+      },
+      growth: {
+        title: 'Growth',
+        desc: 'Data finds the problem; small, fast experiments keep lifting conversion where it matters.',
+        includes: [
+          'Analytics coverage and dashboard setup',
+          'Funnel audit on the critical path',
+          'Hypothesis backlog and ICE prioritisation',
+          'A/B test design and execution',
+          'Findings folded back into the design system',
+          'Monthly report with next-step recommendations'
+        ],
+        flow: [
+          'Audit: establish what the current tracking can answer',
+          'Funnel analysis: locate the worst leak',
+          'Prioritise: use ICE to pick what to test first',
+          'Iterate: design, ship, observe, review'
+        ],
+        for: 'Traffic but weak conversion, and a wish to fix the path systematically',
+        time: 'Monthly cycle, from 3 months'
+      }
+    };
+
+    const modal = document.getElementById('svcModal');
+    if (!modal) return;
+
+    const elTitle = document.getElementById('svcTitle');
+    const elDesc = document.getElementById('svcDesc');
+    const elIcon = document.getElementById('svcIcon');
+    const elInc = document.getElementById('svcIncludes');
+    const elFlow = document.getElementById('svcFlow');
+    const elFor = document.getElementById('svcFor');
+    const elTime = document.getElementById('svcTime');
+    const btnClose = document.getElementById('svcClose');
+    const btnClose2 = document.getElementById('svcClose2');
+    const cta = document.getElementById('svcCta');
+    let lastFocus = null;
+
+    function open(key, card) {
+      const d = SERVICES[key];
+      if (!d) return;
+      const iconNode = card.querySelector('.icon');
+      elIcon.innerHTML = iconNode ? iconNode.innerHTML : '';
+      elTitle.textContent = d.title;
+      elDesc.textContent = d.desc;
+      elInc.innerHTML = d.includes.map(t => '<li>' + t + '</li>').join('');
+      elFlow.innerHTML = d.flow.map(t => '<li>' + t + '</li>').join('');
+      elFor.textContent = d.for;
+      elTime.textContent = d.time;
+      lastFocus = card;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      btnClose.focus();
+    }
+
+    function close() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      if (lastFocus) lastFocus.focus();
+    }
+
+    document.querySelectorAll('.card[data-service]').forEach(card => {
+      card.addEventListener('click', () => open(card.dataset.service, card));
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          open(card.dataset.service, card);
+        }
+      });
+    });
+
+    btnClose.addEventListener('click', close);
+    btnClose2.addEventListener('click', close);
+    cta.addEventListener('click', close);
+    modal.addEventListener('click', e => { if (e.target === modal) close(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) close();
+    });
+  })();
+</script>
+
+<script>
+/* Back to top: anchors on a sticky header do not work, so scroll explicitly */
+document.querySelectorAll('a[href="#top"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+});
+</script>
+<script src="assets/auth.js" defer></script>
+</body>
+</html>
